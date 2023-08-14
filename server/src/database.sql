@@ -26,6 +26,11 @@ Create table Account(
 	Password varchar(30) NOT NULL
 );
 
+Create table Admin(
+	Adminname varchar(50) Primary Key,
+	Password varchar(30) NOT NULL
+);
+
 Create table Ticket (
 	Train_Number varchar(5),
 	PNR varchar(11),
@@ -67,3 +72,4 @@ INSERT INTO Stoppage values ('100', '101','10:25','10:30');
 INSERT INTO Stoppage values ('100', '102','11:00','11:15');
 INSERT INTO Stoppage values ('100', '103','13:30','13:45');
 
+INSERT INTO Admin values ('admin', 'admin');

@@ -10,7 +10,7 @@ const pool = new Pool({
 
 function httpAddNewTicket(req,res) {
     const { train_number, pnr, date_of_journey, user_email } = req.body;
-    pool.query('INSERT INTO Ticket VALUES ($1, $2, $3, $4)', [ train_number, pnr, date_of_journey, user_email], (error, results) => {
+    pool.query('INSERT INTO Ticket VALUES ($1, $2, $3, $4)', [ train_number, pnr, user_email, date_of_journey], (error, results) => {
         if(error){
             throw error;
         }
